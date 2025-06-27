@@ -99,7 +99,7 @@ body {
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -397,11 +397,111 @@ section {
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
 
-.about-text p {
+/* Enhanced About Text Styling */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-highlight {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+}
+
+.intro-divider {
+  color: var(--text-light);
+  font-weight: 300;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.description-main {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
   line-height: 1.7;
+  margin: 0;
+}
+
+.description-main strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.highlight-text {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.skills-preview {
+  background: rgba(100, 108, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.skills-preview h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 108, 255, 0.3);
+}
+
+.description-secondary {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+  background: rgba(97, 218, 251, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--secondary-color);
+}
+
+.description-secondary strong {
+  color: var(--secondary-color);
+  font-weight: 600;
 }
 
 /* Skills Section */
@@ -900,7 +1000,7 @@ section {
   }
   
   .hero {
-    padding: 1rem;
+    padding: 5rem 1rem 1rem 1rem;
     min-height: 80vh;
   }
 
@@ -918,6 +1018,23 @@ section {
   .about-profile-image {
     width: 280px;
     height: 280px;
+  }
+
+  .about-intro {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .intro-highlight {
+    font-size: 1rem;
+  }
+
+  .skills-preview {
+    margin: 1rem 0;
+  }
+
+  .tech-badges {
+    justify-content: center;
   }
   
   .hero-buttons {
@@ -985,9 +1102,35 @@ section {
     height: 200px;
   }
 
+  .hero {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
   .about-profile-image {
     width: 220px;
     height: 220px;
+  }
+
+  .about-intro {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .intro-highlight {
+    font-size: 0.95rem;
+  }
+
+  .description-main {
+    font-size: 1rem;
+  }
+
+  .skills-preview {
+    padding: 1rem;
+  }
+
+  .tech-badge {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
   }
   
   .hero-title {

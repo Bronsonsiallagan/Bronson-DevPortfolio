@@ -55,14 +55,30 @@ function App() {
               <img src="./brons.png" alt="Bronson Siallagan" className="about-profile-image" />
             </div>
             <div className="about-text">
-              <p>
-                I'm a passionate software developer with a strong foundation in both frontend and backend technologies.
-                Currently pursuing my studies while building real-world applications and continuously expanding my skill set.
-              </p>
-              <p>
-                I enjoy solving complex problems, learning new technologies, and creating user-friendly applications
-                that make a difference. When I'm not coding, you can find me exploring new tech trends or working on personal projects.
-              </p>
+              <div className="about-intro">
+                <span className="intro-highlight">IT Del Student</span>
+                <span className="intro-divider">|</span>
+                <span className="intro-highlight">Frontend Developer</span>
+                <span className="intro-divider">|</span>
+                <span className="intro-highlight">Back End Developer Enthusiast</span>
+              </div>
+              
+              <div className="about-description">
+                <p className="description-main">
+                  Undergraduate student in <strong>Information Systems</strong> at Del Institute of Technology, 
+                  passionate about creating digital experiences that matter. I specialize in 
+                  <span className="highlight-text">front-end  development </span>, 
+                  <span className="highlight-text">UI/UX design</span>, 
+                  <span className="highlight-text">mobile development</span>, and
+                  <span className="highlight-text">software engineering</span>.
+                </p>
+            
+                
+                <p className="description-secondary">
+                  🚀 Experienced in developing <strong>mobile applications</strong> and <strong>scalable systems</strong>. 
+                  Committed to enhancing user experiences and delivering high-performance solutions that make a real impact.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -207,8 +223,8 @@ function App() {
                   <span>CSS3</span>
                 </div>
                 <div className="project-links">
-                  <a href="#" className="project-link">Live Demo</a>
-                  <a href="#" className="project-link">GitHub</a>
+                  <a href="https://bronsonsiallagan.github.io/Bronson-DevPortfolio/" target="_blank" className="project-link">Live Demo</a>
+                  <a href="https://github.com/Bronsonsiallagan/Bronson-DevPortfolio" target="_blank" className="project-link">GitHub</a>
                 </div>
               </div>
             </div>
@@ -227,8 +243,8 @@ function App() {
             </p>
             <div className="contact-info">
               <div className="contact-item">
-                <span className="contact-icon">📧</span>
-                <a href="mailto:bronson@example.com">bronson@example.com</a>
+                <span className="contact-icon">📧 </span>
+                <a href="mailto:bronson@example.com">bronsonsiallagan18gmail.com</a>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">💼</span>
@@ -237,6 +253,14 @@ function App() {
               <div className="contact-item">
                 <span className="contact-icon">🐙</span>
                 <a href="https://github.com/bronsonsiallagan" target="_blank">GitHub</a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📱</span>
+                <a href="https://wa.me/6281373026305" target="_blank">WhatsApp</a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📸</span>
+                <a href="https://instagram.com/bronson_siallagan" target="_blank">Instagram</a>
               </div>
             </div>
             
