@@ -31,7 +31,7 @@ function App() {
         <div className="hero-content">
           <div className="hero-image">
             <div className="glow-effect"></div>
-            <img src="/brons.png" alt="Bronson Siallagan" className="profile-image" />
+            <img src="./brons.png" alt="Bronson Siallagan" className="profile-image" />
           </div>
           <h1 className="hero-title">Hi, I'm <span className="highlight">Bronson TM Siallagan</span></h1>
           <p className="hero-subtitle">Full Stack Developer & Software Engineer</p>
@@ -52,7 +52,7 @@ function App() {
           <h2 className="section-title">About Me</h2>
           <div className="about-content">
             <div className="about-image">
-              <img src="/brons.png" alt="Bronson Siallagan" className="about-profile-image" />
+              <img src="./brons.png" alt="Bronson Siallagan" className="about-profile-image" />
             </div>
             <div className="about-text">
               <p>
@@ -244,10 +244,10 @@ function App() {
             <div className="resume-portfolio-section">
               <h3>📄 Resume & Portfolio</h3>
               <div className="download-buttons">
-                <a href="/Bronson TM Siallagan.pdf" download="Bronson-TM-Siallagan-CV.pdf" className="download-btn">
+                <a href="./Bronson TM Siallagan.pdf" download="Bronson-TM-Siallagan-CV.pdf" className="download-btn">
                   Download My Resume
                 </a>
-                <a href="/portfolio-bronson-siallagan.pdf" download="Portfolio-Bronson-Siallagan.pdf" className="download-btn">
+                <a href="./portfolio-bronson-siallagan.pdf" download="Portfolio-Bronson-Siallagan.pdf" className="download-btn">
                   Download My Portfolio
                 </a>
               </div>
