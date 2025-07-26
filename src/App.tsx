@@ -33,7 +33,7 @@ function App() {
           <div style={{ flex: '0 0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className="hero-image" style={{ position: 'relative', width: 310, height: 310, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'conic-gradient(from 180deg at 50% 50%, #a78bfa 0deg, #38bdf8 120deg, #4F46E5 240deg, #a78bfa 360deg)', borderRadius: '50%', boxShadow: '0 8px 40px 0 rgba(80, 80, 200, 0.18)', padding: 10, zIndex: 1, overflow: 'visible' }}>
               <div style={{ width: 285, height: 285, borderRadius: '50%', background: 'linear-gradient(135deg, #f0f4ff 60%, #e0e7ff 100%)', boxShadow: '0 4px 32px 0 rgba(31,38,135,0.10)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
-                <img src="/brons.png" alt="Bronson Siallagan" style={{ width: 270, height: 270, borderRadius: '50%', objectFit: 'cover', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.13)', border: '6px solid #fff', transition: 'transform 0.3s', background: '#f8fafc', display: 'block' }} onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.045)')} onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')} />
+                <img src="brons.png" alt="Bronson Siallagan" style={{ width: 270, height: 270, borderRadius: '50%', objectFit: 'cover', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.13)', border: '6px solid #fff', transition: 'transform 0.3s', background: '#f8fafc', display: 'block' }} onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.045)')} onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')} />
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '50%', boxShadow: '0 0 48px 12px #a5b4fc55', pointerEvents: 'none', zIndex: 0 }} />
               </div>
             </div>
@@ -43,8 +43,9 @@ function App() {
             <h1 className="hero-title" style={{ fontSize: '3.1rem', fontWeight: 800, marginBottom: '0.7rem', lineHeight: 1.1 }}>Hi, I'm <span className="highlight">Bronson TM Siallagan</span></h1>
             <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>Full Stack Developer & Software Engineer</p>
             <p className="hero-description" style={{ fontSize: '1.13rem', color: '#666', marginBottom: '1.2rem', lineHeight: 1.6 }}>
-              I create modern, responsive web applications using cutting-edge technologies.
-  Passionate about clean code, user experience, and continuous learning. </p>
+              I create modern, responsive web applications using cutting-edge technologies.<br />
+              Passionate about clean code, user experience, and continuous learning.
+            </p>
             <div className="hero-buttons" style={{ display: 'flex', gap: '1.1rem' }}>
               <button onClick={() => scrollToSection('projects')} className="btn-primary">View My Work</button>
               <button onClick={() => scrollToSection('contact')} className="btn-secondary">Get In Touch</button>
@@ -63,7 +64,7 @@ function App() {
           <div className="about-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
             <div className="about-image" style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)', borderRadius: '24px', overflow: 'hidden', background: '#fff' }}>
               <img 
-                src="/brons.png" 
+                src="brons.png"
                 alt="Bronson Siallagan" 
                 className="about-profile-image" 
                 style={{ 
