@@ -41,10 +41,9 @@ function App() {
           {/* Text on the right */}
           <div style={{ flex: '1 1 340px', minWidth: 320, maxWidth: 600, textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
             <h1 className="hero-title" style={{ fontSize: '3.1rem', fontWeight: 800, marginBottom: '0.7rem', lineHeight: 1.1 }}>Hi, I'm <span className="highlight">Bronson TM Siallagan</span></h1>
-            <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>Full Stack Developer & Software Engineer</p>
+            <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>I am a student of the Information System Technology Study Program.</p>
             <p className="hero-description" style={{ fontSize: '1.13rem', color: '#666', marginBottom: '1.2rem', lineHeight: 1.6 }}>
-              I create modern, responsive web applications using cutting-edge technologies.<br />
-              Passionate about clean code, user experience, and continuous learning.
+              Interested in Web Development and Mobile Development.<br />
             </p>
             <div className="hero-buttons" style={{ display: 'flex', gap: '1.1rem' }}>
               <button onClick={() => scrollToSection('projects')} className="btn-primary">View My Work</button>
@@ -86,9 +85,6 @@ function App() {
             <div className="about-text" style={{ maxWidth: '540px', textAlign: 'left', marginTop: 0 }}>
               <p style={{ fontSize: '1.18rem', marginBottom: '0.7rem', lineHeight: 1.7 }}>
                 Hi! I’m <span style={{ color: '#4F46E5', fontWeight: 700 }}>Bronson TM Siallagan</span>, an Information Systems student at <span style={{ color: '#06b6d4', fontWeight: 600 }}>IT Del</span> with a strong passion for technology and software development. I’m highly enthusiastic about building impactful digital solutions, especially in the roles of Mobile Developer, Software Engineer, Full Stack Developer, and Backend Developer.
-              </p>
-              <p style={{ fontSize: '1.13rem', marginBottom: 0, lineHeight: 1.7 }}>
-                I love exploring new technologies, solving real-world problems, and continuously improving my skills through hands-on projects. My journey is driven by curiosity, collaboration, and a commitment to delivering high-quality, user-focused applications.
               </p>
             </div>
           </div>
