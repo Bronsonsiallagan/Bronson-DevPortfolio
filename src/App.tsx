@@ -3,6 +3,8 @@ import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
+  const [dataMiningImageIndex, setDataMiningImageIndex] = useState(0)
+  const dataMiningImages = ['dami.png', 'Poster_01.png']
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId)
@@ -41,9 +43,9 @@ function App() {
           {/* Text on the right */}
           <div style={{ flex: '1 1 340px', minWidth: 320, maxWidth: 600, textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
             <h1 className="hero-title" style={{ fontSize: '3.1rem', fontWeight: 800, marginBottom: '0.7rem', lineHeight: 1.1 }}>Hi, I'm <span className="highlight">Bronson TM Siallagan</span></h1>
-            <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>I am a student of the Information System Technology Study Program.</p>
+            <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>Information Systems student at IT Del</p>
             <p className="hero-description" style={{ fontSize: '1.13rem', color: '#666', marginBottom: '1.2rem', lineHeight: 1.6 }}>
-              Interested in Web Development and Mobile Development.<br />
+              Passionate about Full Stack Development and data insights<br />
             </p>
             <div className="hero-buttons" style={{ display: 'flex', gap: '1.1rem' }}>
               <button onClick={() => scrollToSection('projects')} className="btn-primary">View My Work</button>
@@ -84,7 +86,7 @@ function App() {
             </div>
             <div className="about-text" style={{ maxWidth: '540px', textAlign: 'left', marginTop: 0 }}>
               <p style={{ fontSize: '1.18rem', marginBottom: '0.7rem', lineHeight: 1.7 }}>
-                Hi! I’m <span style={{ color: '#4F46E5', fontWeight: 700 }}>Bronson TM Siallagan</span>, an Information Systems student at <span style={{ color: '#06b6d4', fontWeight: 600 }}>IT Del</span> with a strong passion for technology and software development. I’m highly enthusiastic about building impactful digital solutions, especially in the roles of Mobile Developer, Software Engineer, Full Stack Developer, and Backend Developer.
+                Hi! I'm <span style={{ color: '#4F46E5', fontWeight: 700 }}>Bronson TM Siallagan</span>, an Information Systems student at <span style={{ color: '#06b6d4', fontWeight: 600 }}>IT Del</span> with a strong passion for technology and software development. I'm focused on building impactful digital solutions as a Software Engineer, Full Stack Developer, Backend Developer, QA specialist, and data enthusiast.
               </p>
             </div>
           </div>
@@ -92,50 +94,164 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="skills">
+      <section id="skills" className="skills" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="container">
-          <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '1px', textAlign: 'center', marginBottom: '0.7rem' }}>
+          <h2 className="section-title" style={{ fontSize: '2.8rem', fontWeight: 800, letterSpacing: '1px', marginBottom: '0.5rem', textAlign: 'center' }}>
             <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Skills & Technologies</span>
           </h2>
-          <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 24px auto' }}></div>
-          <div style={{ display: 'flex', gap: '2.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
             {/* Frontend Card */}
-            <div style={{ background: '#fff', borderRadius: '20px', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)', padding: '2rem 2.2rem', minWidth: '270px', maxWidth: '340px', flex: '1 1 270px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <h3 style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.7rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}> <span role="img" aria-label="frontend">🎨</span> Frontend</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">TypeScript</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">HTML5</span>
-                <span className="skill-tag">CSS3</span>
-                <span className="skill-tag">Tailwind CSS</span>
-                <span className="skill-tag">Bootstrap</span>
-                <span className="skill-tag">Laravel</span>
-                <span className="skill-tag">Code igniter</span>
-                <span className="skill-tag">Flutter and dark</span>
+            <div style={{ 
+              background: 'linear-gradient(135deg, #f5f3ff 0%, #f0f4ff 100%)',
+              borderRadius: '24px',
+              boxShadow: '0 12px 40px 0 rgba(79, 70, 229, 0.12)',
+              padding: '2.5rem 2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              border: '1px solid rgba(79, 70, 229, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'default'
+            }} 
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-8px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(79, 70, 229, 0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.12)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎨</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Frontend</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
+                {['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Laravel', 'Code igniter', 'Flutter'].map((skill, i) => (
+                  <span key={i} style={{ 
+                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                    color: '#fff',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '20px',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap',
+                    boxShadow: '0 4px 12px rgba(79, 70, 229, 0.25)'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'scale(1.08)'
+                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(79, 70, 229, 0.35)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'scale(1)'
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(79, 70, 229, 0.25)'
+                  }}>
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
+
             {/* Backend Card */}
-            <div style={{ background: '#fff', borderRadius: '20px', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)', padding: '2rem 2.2rem', minWidth: '270px', maxWidth: '340px', flex: '1 1 270px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <h3 style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.7rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}> <span role="img" aria-label="backend">🛠️</span> Backend</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Express.js</span>
-                <span className="skill-tag">Python</span>
-                <span className="skill-tag">REST APIs</span>
+            <div style={{ 
+              background: 'linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%)',
+              borderRadius: '24px',
+              boxShadow: '0 12px 40px 0 rgba(239, 68, 68, 0.12)',
+              padding: '2.5rem 2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              border: '1px solid rgba(239, 68, 68, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'default'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-8px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(239, 68, 68, 0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(239, 68, 68, 0.12)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⚙️</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Backend</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
+                {['Node.js', 'Express.js', 'Python', 'REST APIs', 'TypeScript', 'PHP'].map((skill, i) => (
+                  <span key={i} style={{ 
+                    background: 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)',
+                    color: '#fff',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '20px',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap',
+                    boxShadow: '0 4px 12px rgba(239, 68, 68, 0.25)'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'scale(1.08)'
+                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(239, 68, 68, 0.35)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'scale(1)'
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.25)'
+                  }}>
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
+
             {/* Database & Tools Card */}
-            <div style={{ background: '#fff', borderRadius: '20px', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)', padding: '2rem 2.2rem', minWidth: '270px', maxWidth: '340px', flex: '1 1 270px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <h3 style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.7rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}> <span role="img" aria-label="database">💾</span> Database & Tools</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
-                <span className="skill-tag">MongoDB</span>
-                <span className="skill-tag">PostgreSQL</span>
-                <span className="skill-tag">Git</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">VS Code</span>
-                <span className="skill-tag">Mysql</span>
-                <span className="skill-tag">Android Studio</span>
+            <div style={{ 
+              background: 'linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%)',
+              borderRadius: '24px',
+              boxShadow: '0 12px 40px 0 rgba(34, 197, 94, 0.12)',
+              padding: '2.5rem 2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              border: '1px solid rgba(34, 197, 94, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'default'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-8px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(34, 197, 94, 0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(34, 197, 94, 0.12)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🗄️</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Database & Tools</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
+                {['MongoDB', 'PostgreSQL', 'MySQL', 'SQL Server', 'Git', 'Docker', 'VS Code', 'Android Studio'].map((skill, i) => (
+                  <span key={i} style={{ 
+                    background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
+                    color: '#fff',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '20px',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap',
+                    boxShadow: '0 4px 12px rgba(34, 197, 94, 0.25)'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'scale(1.08)'
+                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(34, 197, 94, 0.35)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'scale(1)'
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(34, 197, 94, 0.25)'
+                  }}>
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -175,64 +291,450 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="projects">
+      <section id="projects" className="projects" style={{ paddingTop: '3rem', paddingBottom: '3rem', backgroundColor: '#f9fafb' }}>
         <div className="container">
-          <h2 className="section-title">Projects Experiences</h2>
-          <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-image">
-                <div className="project-placeholder">🎓</div>
+          <h2 className="section-title" style={{ fontSize: '2.8rem', fontWeight: 800, letterSpacing: '1px', marginBottom: '0.5rem', textAlign: 'center' }}>
+            <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Featured Projects</span>
+          </h2>
+          <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Project Card 1 - SSC Balige */}
+            <div style={{
+              background: '#fff',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)',
+              overflow: 'hidden',
+              transition: 'all 0.3s ease',
+              cursor: 'default',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-12px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+            }}>
+              <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <img src="ssc.png" alt="Sony Sugema College Information System" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div className="project-content">
-                <h3>Sony Sugema College Information System</h3>
-                <p>A comprehensive web-based learning management system for SSC Balige tutoring center. Features student portal, course materials, discussion forums, and administrative management with role-based access control.</p>
-                <div className="project-tech">
-                  <span>Laravel</span>
-                  <span>MySQL</span>
-                  <span>Tailwind CSS</span>
+              <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>Sony Sugema College Information System</h3>
+                <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>A comprehensive web-based learning management system for SSC Balige tutoring center. Features student portal, course materials, discussion forums, and administrative management.</p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                  {['Laravel', 'MySQL', 'Tailwind CSS'].map((tech, i) => (
+                    <span key={i} style={{
+                      background: 'linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%)',
+                      color: '#4F46E5',
+                      padding: '0.4rem 0.9rem',
+                      borderRadius: '16px',
+                      fontSize: '0.85rem',
+                      fontWeight: 600,
+                      border: '1px solid rgba(79, 70, 229, 0.2)'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-                <div className="project-links">
-                  <a href="https://www.figma.com/design/gXt5LCspBdJ0D0YjlHBDyo/SSC-Balige?node-id=0-1&p=f&t=vcGEZOEaEEZCoCWa-0" target="_blank" className="project-link">Figma Design</a>
-                  <a href="https://github.com/proyek-mahasiswa/psi-2425ge-04-ssc-balige/tree/development" target="_blank" className="project-link">GitHub</a>
+                
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a href="https://www.figma.com/design/gXt5LCspBdJ0D0YjlHBDyo/SSC-Balige?node-id=0-1&p=f&t=vcGEZOEaEEZCoCWa-0" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#4F46E5',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: 'rgba(79, 70, 229, 0.1)',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #4F46E5'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#4F46E5'
+                    e.currentTarget.style.color = '#fff'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                    e.currentTarget.style.color = '#4F46E5'
+                  }}>
+                    Figma Design
+                  </a>
+                  <a href="https://github.com/proyek-mahasiswa/psi-2425ge-04-ssc-balige/tree/development" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: '#1f2937',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #1f2937'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#111827'
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = '#1f2937'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}>
+                    GitHub
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="project-card">
-              <div className="project-image">
-                <div className="project-placeholder">🗂️</div>
+            {/* Project Card 2 - ArsipSisfor */}
+            <div style={{
+              background: '#fff',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)',
+              overflow: 'hidden',
+              transition: 'all 0.3s ease',
+              cursor: 'default',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-12px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+            }}>
+              <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <img src="arsip.jpeg" alt="ArsipSisfor - Academic Document Management System" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div className="project-content">
-                <h3>ArsipSisfor - Academic Document Management System</h3>
-                <p>A comprehensive cloud-based document management system similar to Google Drive, designed specifically for IT Del Information Systems faculty and staff. Features secure file storage, categorized document organization, and favorite marking system.</p>
-                <div className="project-tech">
-                  <span>Laravel</span>
-                  <span>PHP</span>
-                  <span>MySQL</span>
-                  <span>Postman API</span>
+              <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>ArsipSisfor - Academic Document Management</h3>
+                <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>A comprehensive cloud-based document management system similar to Google Drive, designed for IT Del Information Systems faculty and staff. Features secure storage and document organization.</p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                  {['Laravel', 'PHP', 'MySQL', 'Postman API'].map((tech, i) => (
+                    <span key={i} style={{
+                      background: 'linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%)',
+                      color: '#4F46E5',
+                      padding: '0.4rem 0.9rem',
+                      borderRadius: '16px',
+                      fontSize: '0.85rem',
+                      fontWeight: 600,
+                      border: '1px solid rgba(79, 70, 229, 0.2)'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-                <div className="project-links">
-                  <a href="https://www.figma.com/design/gNMr62rCiSlUsPqlOjrRVi/ArsipSI-hal-mahasiswa?node-id=0-1&p=f&t=jjlWWYocTb8RnQrl-0" target="_blank" className="project-link">Figma Design</a>
-                  <a href="https://github.com/agnesmosh241104/ArsipSisfor/tree/halaman_home" target="_blank" className="project-link">GitHub</a>
+                
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a href="https://www.figma.com/design/gNMr62rCiSlUsPqlOjrRVi/ArsipSI-hal-mahasiswa?node-id=0-1&p=f&t=jjlWWYocTb8RnQrl-0" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#4F46E5',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: 'rgba(79, 70, 229, 0.1)',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #4F46E5'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#4F46E5'
+                    e.currentTarget.style.color = '#fff'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                    e.currentTarget.style.color = '#4F46E5'
+                  }}>
+                    Figma Design
+                  </a>
+                  <a href="https://github.com/agnesmosh241104/ArsipSisfor/tree/halaman_home" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: '#1f2937',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #1f2937'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#111827'
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = '#1f2937'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}>
+                    GitHub
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="project-card">
-              <div className="project-image">
-                <div className="project-placeholder">🎨</div>
+            {/* Project Card 3 - Portfolio */}
+            <div style={{
+              background: '#fff',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)',
+              overflow: 'hidden',
+              transition: 'all 0.3s ease',
+              cursor: 'default',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-12px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+            }}>
+              <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <img src="portofolio.png" alt="Portfolio Website" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div className="project-content">
-                <h3>Portfolio Website</h3>
-                <p>This very portfolio website! Built with React, TypeScript, and modern CSS. Features smooth animations and responsive design.</p>
-                <div className="project-tech">
-                  <span>React</span>
-                  <span>TypeScript</span>
-                  <span>CSS3</span>
+              <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>Portfolio Website</h3>
+                <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>This very portfolio website! Built with React, TypeScript, and modern CSS. Features smooth animations, responsive design, and interactive components.</p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                  {['React', 'TypeScript', 'CSS3'].map((tech, i) => (
+                    <span key={i} style={{
+                      background: 'linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%)',
+                      color: '#4F46E5',
+                      padding: '0.4rem 0.9rem',
+                      borderRadius: '16px',
+                      fontSize: '0.85rem',
+                      fontWeight: 600,
+                      border: '1px solid rgba(79, 70, 229, 0.2)'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-                <div className="project-links">
-                  <a href="#" className="project-link">Live Demo</a>
-                  <a href="#" className="project-link">GitHub</a>
+                
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a href="#" style={{
+                    color: '#4F46E5',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: 'rgba(79, 70, 229, 0.1)',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #4F46E5'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#4F46E5'
+                    e.currentTarget.style.color = '#fff'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                    e.currentTarget.style.color = '#4F46E5'
+                  }}>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/Bronsonsiallagan/Bronson-DevPortfolio" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: '#1f2937',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #1f2937'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#111827'
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = '#1f2937'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 4 - Data Mining */}
+            <div style={{
+              background: '#fff',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.10)',
+              overflow: 'hidden',
+              transition: 'all 0.3s ease',
+              cursor: 'default',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-12px)'
+              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+            }}>
+              <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', position: 'relative' }}>
+                <img src={dataMiningImages[dataMiningImageIndex]} alt="Data Mining - SVM Diabetes Prediction" style={{ width: '100%', height: '100%', objectFit: 'contain', transition: 'opacity 0.3s ease' }} />
+                
+                {/* Previous Button */}
+                <button onClick={() => setDataMiningImageIndex(dataMiningImageIndex === 0 ? dataMiningImages.length - 1 : dataMiningImageIndex - 1)} style={{
+                  position: 'absolute',
+                  left: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  fontSize: '1.2rem',
+                  transition: 'all 0.2s ease',
+                  fontWeight: 'bold',
+                  color: '#4F46E5'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                  e.currentTarget.style.transform = 'translateY(-50%)'
+                }}>
+                  ❮
+                </button>
+
+                {/* Next Button */}
+                <button onClick={() => setDataMiningImageIndex(dataMiningImageIndex === dataMiningImages.length - 1 ? 0 : dataMiningImageIndex + 1)} style={{
+                  position: 'absolute',
+                  right: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  fontSize: '1.2rem',
+                  transition: 'all 0.2s ease',
+                  fontWeight: 'bold',
+                  color: '#4F46E5'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                  e.currentTarget.style.transform = 'translateY(-50%)'
+                }}>
+                  ❯
+                </button>
+
+                {/* Indicator Dots */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '10px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  display: 'flex',
+                  gap: '8px'
+                }}>
+                  {dataMiningImages.map((_, i) => (
+                    <button key={i} onClick={() => setDataMiningImageIndex(i)} style={{
+                      width: dataMiningImageIndex === i ? '24px' : '8px',
+                      height: '8px',
+                      borderRadius: '4px',
+                      background: dataMiningImageIndex === i ? '#fff' : 'rgba(255, 255, 255, 0.6)',
+                      border: 'none',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={e => {
+                      if (dataMiningImageIndex !== i) {
+                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                      }
+                    }}
+                    onMouseLeave={e => {
+                      if (dataMiningImageIndex !== i) {
+                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.6)'
+                      }
+                    }} />
+                  ))}
+                </div>
+              </div>
+              <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>SVM Model for Diabetes Diagnosis & Verification Cost Estimation</h3>
+                <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>Application of SVM Model to Predict Diabetes Mellitus Diagnosis and Estimate Verification Costs in BPJS Users. Using machine learning for accurate and efficient diagnosis.</p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+                  {['Python', 'Google Colab', 'SVM', 'Machine Learning', 'Deployment'].map((tech, i) => (
+                    <span key={i} style={{
+                      background: 'linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%)',
+                      color: '#4F46E5',
+                      padding: '0.4rem 0.9rem',
+                      borderRadius: '16px',
+                      fontSize: '0.85rem',
+                      fontWeight: 600,
+                      border: '1px solid rgba(79, 70, 229, 0.2)'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a href="https://github.com/ReinhardBatubara/BPPJS-Hackaton" target="_blank" rel="noopener noreferrer" style={{
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '8px',
+                    background: '#1f2937',
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    border: '1px solid #1f2937'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#111827'
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = '#1f2937'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}>
+                    GitHub
+                  </a>
                 </div>
               </div>
             </div>
@@ -241,62 +743,227 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact">
+      <section id="contact" className="contact" style={{ paddingTop: '3rem', paddingBottom: '3rem', backgroundColor: '#f9fafb' }}>
         <div className="container">
-          <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '1px', textAlign: 'center', marginBottom: '0.7rem' }}>
+          <h2 className="section-title" style={{ fontSize: '2.8rem', fontWeight: 800, letterSpacing: '1px', marginBottom: '0.5rem', textAlign: 'center' }}>
             <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Get In Touch</span>
           </h2>
-          <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 24px auto' }}></div>
-          <div className="contact-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.5rem' }}>
-            <p className="contact-description" style={{ fontSize: '1.18rem', color: '#444', textAlign: 'center', marginBottom: '1.5rem', maxWidth: 600 }}>
-              I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. <br/>Feel free to reach out!
+          <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
+          
+          <div className="contact-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3rem' }}>
+            <p className="contact-description" style={{ fontSize: '1.1rem', color: '#666', textAlign: 'center', marginBottom: '1rem', maxWidth: 600, lineHeight: 1.7 }}>
+              I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out! 🚀
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center', marginBottom: '1.5rem' }}>
-              <a href="mailto:bronson@example.com" style={{ textDecoration: 'none' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.2rem 2.2rem', display: 'flex', alignItems: 'center', gap: '0.7rem', fontWeight: 600, color: '#4F46E5', fontSize: '1.08rem', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }} onMouseOver={e => {e.currentTarget.style.transform='translateY(-4px) scale(1.04)';e.currentTarget.style.boxShadow='0 8px 32px 0 rgba(31,38,135,0.13)';}} onMouseOut={e => {e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='0 4px 24px 0 rgba(31,38,135,0.10)';}}>
-                  <span style={{ fontSize: '1.5rem' }}>📧</span> bronsonsiallagan18@gmail.com
+            
+            {/* Contact Buttons Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', maxWidth: '1000px', width: '100%' }}>
+              {/* Email */}
+              <a href="mailto:bronsonsiallagan18@gmail.com" style={{ textDecoration: 'none' }}>
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px 0 rgba(79, 70, 229, 0.12)',
+                  padding: '2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.2rem',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: '2px solid transparent'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px)'
+                  e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.20)'
+                  e.currentTarget.style.borderColor = '#4F46E5'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                  e.currentTarget.style.borderColor = 'transparent'
+                }}>
+                  <div style={{ fontSize: '2.5rem' }}>📧</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>Email</div>
+                    <div style={{ color: '#4F46E5', fontWeight: 600, fontSize: '0.95rem' }}>bronsonsiallagan18@gmail.com</div>
+                  </div>
                 </div>
               </a>
+
+              {/* WhatsApp */}
               <a href="https://wa.me/6281373026305" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.2rem 2.2rem', display: 'flex', alignItems: 'center', gap: '0.7rem', fontWeight: 600, color: '#4F46E5', fontSize: '1.08rem', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }} onMouseOver={e => {e.currentTarget.style.transform='translateY(-4px) scale(1.04)';e.currentTarget.style.boxShadow='0 8px 32px 0 rgba(31,38,135,0.13)';}} onMouseOut={e => {e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='0 4px 24px 0 rgba(31,38,135,0.10)';}}>
-                  <span style={{ fontSize: '1.5rem' }}>�</span> WhatsApp
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px 0 rgba(79, 70, 229, 0.12)',
+                  padding: '2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.2rem',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: '2px solid transparent'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px)'
+                  e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.20)'
+                  e.currentTarget.style.borderColor = '#25D366'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                  e.currentTarget.style.borderColor = 'transparent'
+                }}>
+                  <div style={{ fontSize: '2.5rem' }}>💬</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>WhatsApp</div>
+                    <div style={{ color: '#25D366', fontWeight: 600, fontSize: '0.95rem' }}>+62 813-7302-6305</div>
+                  </div>
                 </div>
               </a>
-              <a href="https://instagram.com/bronson_siallagan" target="_blank" style={{ textDecoration: 'none' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.2rem 2.2rem', display: 'flex', alignItems: 'center', gap: '0.7rem', fontWeight: 600, color: '#4F46E5', fontSize: '1.08rem', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }} onMouseOver={e => {e.currentTarget.style.transform='translateY(-4px) scale(1.04)';e.currentTarget.style.boxShadow='0 8px 32px 0 rgba(31,38,135,0.13)';}} onMouseOut={e => {e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='0 4px 24px 0 rgba(31,38,135,0.10)';}}>
-                  <span style={{ fontSize: '1.5rem' }}>📸</span> bronson_siallagan
+
+              {/* Instagram */}
+              <a href="https://instagram.com/bronson_siallagan" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px 0 rgba(79, 70, 229, 0.12)',
+                  padding: '2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.2rem',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: '2px solid transparent'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px)'
+                  e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.20)'
+                  e.currentTarget.style.borderColor = '#E4405F'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                  e.currentTarget.style.borderColor = 'transparent'
+                }}>
+                  <div style={{ fontSize: '2.5rem' }}>📸</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>Instagram</div>
+                    <div style={{ color: '#E4405F', fontWeight: 600, fontSize: '0.95rem' }}>@bronson_siallagan</div>
+                  </div>
                 </div>
               </a>
-              <a href="https://linkedin.com/in/bronsonsiallagan" target="_blank" style={{ textDecoration: 'none' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.2rem 2.2rem', display: 'flex', alignItems: 'center', gap: '0.7rem', fontWeight: 600, color: '#4F46E5', fontSize: '1.08rem', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }} onMouseOver={e => {e.currentTarget.style.transform='translateY(-4px) scale(1.04)';e.currentTarget.style.boxShadow='0 8px 32px 0 rgba(31,38,135,0.13)';}} onMouseOut={e => {e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='0 4px 24px 0 rgba(31,38,135,0.10)';}}>
-                  <span style={{ fontSize: '1.5rem' }}>�</span> LinkedIn
-                </div> 
+
+              {/* LinkedIn */}
+              <a href="https://linkedin.com/in/bronsonsiallagan" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px 0 rgba(79, 70, 229, 0.12)',
+                  padding: '2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.2rem',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: '2px solid transparent'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px)'
+                  e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.20)'
+                  e.currentTarget.style.borderColor = '#0A66C2'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                  e.currentTarget.style.borderColor = 'transparent'
+                }}>
+                  <div style={{ fontSize: '2.5rem' }}>💼</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>LinkedIn</div>
+                    <div style={{ color: '#0A66C2', fontWeight: 600, fontSize: '0.95rem' }}>Bronson Siallagan</div>
+                  </div>
+                </div>
               </a>
-              <a href="https://github.com/bronsonsiallagan" target="_blank" style={{ textDecoration: 'none' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.2rem 2.2rem', display: 'flex', alignItems: 'center', gap: '0.7rem', fontWeight: 600, color: '#4F46E5', fontSize: '1.08rem', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }} onMouseOver={e => {e.currentTarget.style.transform='translateY(-4px) scale(1.04)';e.currentTarget.style.boxShadow='0 8px 32px 0 rgba(31,38,135,0.13)';}} onMouseOut={e => {e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='0 4px 24px 0 rgba(31,38,135,0.10)';}}>
-                  <span style={{ fontSize: '1.5rem' }}>🐙</span> GitHub
+
+              {/* GitHub */}
+              <a href="https://github.com/Bronsonsiallagan" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 24px 0 rgba(79, 70, 229, 0.12)',
+                  padding: '2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.2rem',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: '2px solid transparent'
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px)'
+                  e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.20)'
+                  e.currentTarget.style.borderColor = '#1F2937'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                  e.currentTarget.style.borderColor = 'transparent'
+                }}>
+                  <div style={{ fontSize: '2.5rem' }}>🐙</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>GitHub</div>
+                    <div style={{ color: '#1F2937', fontWeight: 600, fontSize: '0.95rem' }}>Bronsonsiallagan</div>
+                  </div>
                 </div>
               </a>
             </div>
+
             {/* Resume & Portfolio Download Section */}
-            <div className="resume-portfolio-section" style={{ background: '#fff', borderRadius: '18px', boxShadow: '0 4px 24px 0 rgba(31,38,135,0.10)', padding: '1.5rem 2rem', marginTop: '1.5rem', textAlign: 'center', maxWidth: 420, width: '100%' }}>
-              <h3 style={{ fontWeight: 700, fontSize: '1.18rem', marginBottom: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', color: '#444' }}>📄 Resume & Portfolio</h3>
-              <div className="download-buttons">
-                <a href="/CV Bronson TM Siallagan.pdf" download="Bronson-TM-Siallagan-CV.pdf" className="download-btn" style={{ display: 'block', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', color: '#fff', fontWeight: 700, borderRadius: '10px', padding: '0.9rem 0', fontSize: '1.08rem', margin: '0 auto', width: '90%', boxShadow: '0 2px 8px 0 rgba(31,38,135,0.08)', transition: 'background 0.2s, transform 0.2s', border: 'none', textAlign: 'center', textDecoration: 'none' }} onMouseOver={e => e.currentTarget.style.transform='scale(1.03)'} onMouseOut={e => e.currentTarget.style.transform='none'}>
-                  Download My Resume
-                </a>
-              </div>
+            <div className="resume-portfolio-section" style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #06b6d4 100%)',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px 0 rgba(79, 70, 229, 0.25)',
+              padding: '2.5rem',
+              marginTop: '2rem',
+              textAlign: 'center',
+              maxWidth: 500,
+              width: '100%'
+            }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📄</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: '0.8rem', color: '#fff' }}>Get My Resume</h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Download my CV to learn more about my experience and qualifications</p>
+              <a href="Bronson TM Siallagan.pdf" download="Bronson-TM-Siallagan-CV.pdf" className="download-btn" style={{
+                display: 'inline-block',
+                background: '#fff',
+                color: '#4F46E5',
+                fontWeight: 700,
+                borderRadius: '12px',
+                padding: '1rem 2rem',
+                fontSize: '1rem',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)',
+                transition: 'all 0.3s ease',
+                border: 'none',
+                textAlign: 'center',
+                textDecoration: 'none',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)'
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.25)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.15)'
+              }}>
+                ⬇️ Download My Resume
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2025 Bronson Siallagan. All rights reserved.</p>
-        </div>
-      </footer>
+     
     </div>
   )
 }
