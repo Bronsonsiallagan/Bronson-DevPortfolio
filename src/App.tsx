@@ -41,11 +41,11 @@ function App() {
             </div>
           </div>
           {/* Text on the right */}
-          <div style={{ flex: '1 1 340px', minWidth: 320, maxWidth: 600, textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
+          <div style={{ flex: '1 1 340px', minWidth: 320, maxWidth: 620, textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
             <h1 className="hero-title" style={{ fontSize: '3.1rem', fontWeight: 800, marginBottom: '0.7rem', lineHeight: 1.1 }}>Hi, I'm <span className="highlight">Bronson TM Siallagan</span></h1>
-            <p className="hero-subtitle" style={{ fontSize: '1.45rem', fontWeight: 600, color: '#555', marginBottom: '0.5rem' }}>Information Systems student at IT Del</p>
-            <p className="hero-description" style={{ fontSize: '1.13rem', color: '#666', marginBottom: '1.2rem', lineHeight: 1.6 }}>
-              Passionate about Full Stack Development and data insights<br />
+            <p className="hero-subtitle" style={{ fontSize: '1.35rem', fontWeight: 700, color: '#4F46E5', marginBottom: '0.6rem', lineHeight: 1.3 }}>Software Engineer | Full-Stack Developer & QA Tester</p>
+            <p className="hero-description" style={{ fontSize: '1.1rem', color: '#4b5563', marginBottom: '1.4rem', lineHeight: 1.65 }}>
+              Information Systems graduate candidate from <strong>Del Institute of Technology</strong>. Experienced in building full-stack web applications and ERP modules using <strong>Java Spring Boot</strong>, <strong>Golang</strong>, <strong>NestJS</strong>, <strong>PHP</strong>, <strong>React</strong> & <strong>Vue</strong>.
             </p>
             <div className="hero-buttons" style={{ display: 'flex', gap: '1.1rem' }}>
               <button onClick={() => scrollToSection('projects')} className="btn-primary">View My Work</button>
@@ -64,29 +64,35 @@ function App() {
           <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 18px auto' }}></div>
           <div className="about-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
             <div className="about-image" style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)', borderRadius: '24px', overflow: 'hidden', background: '#fff' }}>
-              <img 
+              <img
                 src={`${import.meta.env.BASE_URL}brons.png`}
-                alt="Bronson Siallagan" 
-                className="about-profile-image" 
-                style={{ 
-                  width: '320px', 
-                  height: '380px', 
-                  borderRadius: '32px', 
-                  objectFit: 'cover', 
-                  boxShadow: '0 12px 40px 0 rgba(31,38,135,0.18)', 
+                alt="Bronson Siallagan"
+                className="about-profile-image"
+                style={{
+                  width: '320px',
+                  height: '380px',
+                  borderRadius: '32px',
+                  objectFit: 'cover',
+                  boxShadow: '0 12px 40px 0 rgba(31,38,135,0.18)',
                   border: '4px solid #4F46E5',
                   background: 'linear-gradient(135deg, #f0f4ff 60%, #e0e7ff 100%)',
                   transition: 'transform 0.3s',
                   margin: '0 auto',
                   display: 'block',
-                }} 
+                }}
                 onMouseOver={e => e.currentTarget.style.transform = 'scale(1.04)'}
                 onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
               />
             </div>
-            <div className="about-text" style={{ maxWidth: '540px', textAlign: 'left', marginTop: 0 }}>
-              <p style={{ fontSize: '1.18rem', marginBottom: '0.7rem', lineHeight: 1.7 }}>
-                Hi! I'm <span style={{ color: '#4F46E5', fontWeight: 700 }}>Bronson TM Siallagan</span>, an Information Systems student at <span style={{ color: '#06b6d4', fontWeight: 600 }}>IT Del</span> with a strong passion for technology and software development. I'm focused on building impactful digital solutions as a Software Engineer, Full Stack Developer, Backend Developer, QA specialist, and data enthusiast.
+            <div className="about-text" style={{ maxWidth: '640px', textAlign: 'left', marginTop: 0 }}>
+              <h3 style={{ fontSize: '1.7rem', fontWeight: 800, color: '#1f2937', marginBottom: '0.8rem', lineHeight: 1.3 }}>
+                Software Engineer | Full-Stack Developer & Software Tester
+              </h3>
+              <p style={{ fontSize: '1.15rem', color: '#4b5563', marginBottom: '1.2rem', lineHeight: 1.75 }}>
+                Hi! I'm <span style={{ color: '#4F46E5', fontWeight: 700 }}>Bronson TM Siallagan</span>, an Information Systems graduate candidate from <span style={{ color: '#06b6d4', fontWeight: 700 }}>Del Institute of Technology</span> with hands-on experience across the entire software development lifecycle (SDLC). As a versatile <strong>Software Engineer</strong>, <strong>Full-Stack Developer</strong>, and <strong>Software Tester</strong>, I specialize in architecting scalable web & ERP applications, designing robust RESTful APIs, and shipping high-quality digital solutions.
+              </p>
+              <p style={{ fontSize: '1.05rem', color: '#6b7280', lineHeight: 1.7 }}>
+                Skilled in PHP (Laravel, CodeIgniter), Golang, NestJS, Java Spring Boot, React, Vue, and Angular, with expertise in manual functional testing, Postman API testing, and database optimization.
               </p>
             </div>
           </div>
@@ -100,10 +106,10 @@ function App() {
             <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Skills & Technologies</span>
           </h2>
           <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
             {/* Frontend Card */}
-            <div style={{ 
+            <div style={{
               background: 'linear-gradient(135deg, #f5f3ff 0%, #f0f4ff 100%)',
               borderRadius: '24px',
               boxShadow: '0 12px 40px 0 rgba(79, 70, 229, 0.12)',
@@ -114,20 +120,20 @@ function App() {
               border: '1px solid rgba(79, 70, 229, 0.1)',
               transition: 'all 0.3s ease',
               cursor: 'default'
-            }} 
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-8px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(79, 70, 229, 0.20)'
             }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.12)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-8px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(79, 70, 229, 0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(79, 70, 229, 0.12)'
+              }}>
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎨</div>
               <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Frontend</h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
                 {['React', 'TypeScript', 'Vue 3', 'Angular 18', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'PrimeVue', 'Laravel', 'CodeIgniter', 'Flutter'].map((skill, i) => (
-                  <span key={i} style={{ 
+                  <span key={i} style={{
                     background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
                     color: '#fff',
                     padding: '0.5rem 1rem',
@@ -139,14 +145,14 @@ function App() {
                     whiteSpace: 'nowrap',
                     boxShadow: '0 4px 12px rgba(79, 70, 229, 0.25)'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = 'scale(1.08)'
-                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(79, 70, 229, 0.35)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = 'scale(1)'
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(79, 70, 229, 0.25)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.transform = 'scale(1.08)'
+                      e.currentTarget.style.boxShadow = '0 6px 18px rgba(79, 70, 229, 0.35)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.transform = 'scale(1)'
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(79, 70, 229, 0.25)'
+                    }}>
                     {skill}
                   </span>
                 ))}
@@ -154,7 +160,7 @@ function App() {
             </div>
 
             {/* Backend Card */}
-            <div style={{ 
+            <div style={{
               background: 'linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%)',
               borderRadius: '24px',
               boxShadow: '0 12px 40px 0 rgba(239, 68, 68, 0.12)',
@@ -166,19 +172,19 @@ function App() {
               transition: 'all 0.3s ease',
               cursor: 'default'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-8px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(239, 68, 68, 0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(239, 68, 68, 0.12)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-8px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(239, 68, 68, 0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(239, 68, 68, 0.12)'
+              }}>
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⚙️</div>
               <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Backend</h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
                 {['Java (Spring Boot)', 'Golang (Gin)', 'NestJS', 'Node.js', 'Express.js', 'Python', 'PHP', 'REST APIs', 'TypeORM', 'Hibernate / JPA'].map((skill, i) => (
-                  <span key={i} style={{ 
+                  <span key={i} style={{
                     background: 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)',
                     color: '#fff',
                     padding: '0.5rem 1rem',
@@ -190,14 +196,14 @@ function App() {
                     whiteSpace: 'nowrap',
                     boxShadow: '0 4px 12px rgba(239, 68, 68, 0.25)'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = 'scale(1.08)'
-                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(239, 68, 68, 0.35)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = 'scale(1)'
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.25)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.transform = 'scale(1.08)'
+                      e.currentTarget.style.boxShadow = '0 6px 18px rgba(239, 68, 68, 0.35)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.transform = 'scale(1)'
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.25)'
+                    }}>
                     {skill}
                   </span>
                 ))}
@@ -205,7 +211,7 @@ function App() {
             </div>
 
             {/* Database & Tools Card */}
-            <div style={{ 
+            <div style={{
               background: 'linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%)',
               borderRadius: '24px',
               boxShadow: '0 12px 40px 0 rgba(34, 197, 94, 0.12)',
@@ -217,19 +223,19 @@ function App() {
               transition: 'all 0.3s ease',
               cursor: 'default'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-8px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(34, 197, 94, 0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(34, 197, 94, 0.12)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-8px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(34, 197, 94, 0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(34, 197, 94, 0.12)'
+              }}>
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🗄️</div>
               <h3 style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1f2937' }}>Database & Tools</h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', justifyContent: 'center' }}>
                 {['MySQL', 'PostgreSQL', 'MongoDB', 'SQL Server', 'Git', 'Docker', 'JWT', 'Maven', 'Chart.js', 'VS Code', 'Android Studio'].map((skill, i) => (
-                  <span key={i} style={{ 
+                  <span key={i} style={{
                     background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
                     color: '#fff',
                     padding: '0.5rem 1rem',
@@ -241,14 +247,14 @@ function App() {
                     whiteSpace: 'nowrap',
                     boxShadow: '0 4px 12px rgba(34, 197, 94, 0.25)'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = 'scale(1.08)'
-                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(34, 197, 94, 0.35)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = 'scale(1)'
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(34, 197, 94, 0.25)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.transform = 'scale(1.08)'
+                      e.currentTarget.style.boxShadow = '0 6px 18px rgba(34, 197, 94, 0.35)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.transform = 'scale(1)'
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(34, 197, 94, 0.25)'
+                    }}>
                     {skill}
                   </span>
                 ))}
@@ -297,7 +303,7 @@ function App() {
             <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Featured Projects</span>
           </h2>
           <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
             {/* Project Card 1 - SSC Balige */}
             <div style={{
@@ -311,21 +317,21 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <img src={`${import.meta.env.BASE_URL}ssc.png`} alt="Sony Sugema College Information System" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>Sony Sugema College Information System</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>A comprehensive web-based learning management system for SSC Balige tutoring center. Features student portal, course materials, discussion forums, and administrative management.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['Laravel', 'MySQL', 'Tailwind CSS'].map((tech, i) => (
                     <span key={i} style={{
@@ -341,7 +347,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://www.figma.com/design/gXt5LCspBdJ0D0YjlHBDyo/SSC-Balige?node-id=0-1&p=f&t=vcGEZOEaEEZCoCWa-0" target="_blank" rel="noopener noreferrer" style={{
                     color: '#4F46E5',
@@ -355,14 +361,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #4F46E5'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#4F46E5'
-                    e.currentTarget.style.color = '#fff'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
-                    e.currentTarget.style.color = '#4F46E5'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#4F46E5'
+                      e.currentTarget.style.color = '#fff'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                      e.currentTarget.style.color = '#4F46E5'
+                    }}>
                     Figma Design
                   </a>
                   <a href="https://github.com/proyek-mahasiswa/psi-2425ge-04-ssc-balige/tree/development" target="_blank" rel="noopener noreferrer" style={{
@@ -377,14 +383,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -403,21 +409,21 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <img src={`${import.meta.env.BASE_URL}arsip.jpeg`} alt="ArsipSisfor - Academic Document Management System" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>ArsipSisfor - Academic Document Management</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>A comprehensive cloud-based document management system similar to Google Drive, designed for IT Del Information Systems faculty and staff. Features secure storage and document organization.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['Laravel', 'PHP', 'MySQL', 'Postman API'].map((tech, i) => (
                     <span key={i} style={{
@@ -433,7 +439,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://www.figma.com/design/gNMr62rCiSlUsPqlOjrRVi/ArsipSI-hal-mahasiswa?node-id=0-1&p=f&t=jjlWWYocTb8RnQrl-0" target="_blank" rel="noopener noreferrer" style={{
                     color: '#4F46E5',
@@ -447,14 +453,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #4F46E5'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#4F46E5'
-                    e.currentTarget.style.color = '#fff'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
-                    e.currentTarget.style.color = '#4F46E5'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#4F46E5'
+                      e.currentTarget.style.color = '#fff'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                      e.currentTarget.style.color = '#4F46E5'
+                    }}>
                     Figma Design
                   </a>
                   <a href="https://github.com/agnesmosh241104/ArsipSisfor/tree/halaman_home" target="_blank" rel="noopener noreferrer" style={{
@@ -469,14 +475,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -495,21 +501,21 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <img src={`${import.meta.env.BASE_URL}portofolio.png`} alt="Portfolio Website" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>Portfolio Website</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>This very portfolio website! Built with React, TypeScript, and modern CSS. Features smooth animations, responsive design, and interactive components.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['React', 'TypeScript', 'CSS3'].map((tech, i) => (
                     <span key={i} style={{
@@ -525,7 +531,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{
                     color: '#4F46E5',
@@ -539,14 +545,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #4F46E5'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#4F46E5'
-                    e.currentTarget.style.color = '#fff'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
-                    e.currentTarget.style.color = '#4F46E5'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#4F46E5'
+                      e.currentTarget.style.color = '#fff'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = 'rgba(79, 70, 229, 0.1)'
+                      e.currentTarget.style.color = '#4F46E5'
+                    }}>
                     Live Demo
                   </a>
                   <a href="https://github.com/Bronsonsiallagan/Bronson-DevPortfolio" target="_blank" rel="noopener noreferrer" style={{
@@ -561,14 +567,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -587,17 +593,17 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', overflow: 'hidden', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', position: 'relative' }}>
                 <img src={dataMiningImages[dataMiningImageIndex]} alt="Data Mining - SVM Diabetes Prediction" style={{ width: '100%', height: '100%', objectFit: 'contain', transition: 'opacity 0.3s ease' }} />
-                
+
                 {/* Previous Button */}
                 <button onClick={() => setDataMiningImageIndex(dataMiningImageIndex === 0 ? dataMiningImages.length - 1 : dataMiningImageIndex - 1)} style={{
                   position: 'absolute',
@@ -618,14 +624,14 @@ function App() {
                   fontWeight: 'bold',
                   color: '#4F46E5'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
-                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
-                  e.currentTarget.style.transform = 'translateY(-50%)'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                    e.currentTarget.style.transform = 'translateY(-50%)'
+                  }}>
                   ❮
                 </button>
 
@@ -649,14 +655,14 @@ function App() {
                   fontWeight: 'bold',
                   color: '#4F46E5'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
-                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
-                  e.currentTarget.style.transform = 'translateY(-50%)'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 1)'
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                    e.currentTarget.style.transform = 'translateY(-50%)'
+                  }}>
                   ❯
                 </button>
 
@@ -679,23 +685,23 @@ function App() {
                       cursor: 'pointer',
                       transition: 'all 0.3s ease'
                     }}
-                    onMouseEnter={e => {
-                      if (dataMiningImageIndex !== i) {
-                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
-                      }
-                    }}
-                    onMouseLeave={e => {
-                      if (dataMiningImageIndex !== i) {
-                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.6)'
-                      }
-                    }} />
+                      onMouseEnter={e => {
+                        if (dataMiningImageIndex !== i) {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.8)'
+                        }
+                      }}
+                      onMouseLeave={e => {
+                        if (dataMiningImageIndex !== i) {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.6)'
+                        }
+                      }} />
                   ))}
                 </div>
               </div>
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>SVM Model for Diabetes Diagnosis & Verification Cost Estimation</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>Application of SVM Model to Predict Diabetes Mellitus Diagnosis and Estimate Verification Costs in BPJS Users. Using machine learning for accurate and efficient diagnosis.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['Python', 'Google Colab', 'SVM', 'Machine Learning', 'Deployment'].map((tech, i) => (
                     <span key={i} style={{
@@ -711,7 +717,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://github.com/ReinhardBatubara/BPPJS-Hackaton" target="_blank" rel="noopener noreferrer" style={{
                     color: '#fff',
@@ -725,14 +731,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -751,14 +757,14 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', padding: '1.5rem', textAlign: 'center' }}>
                 <div style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>📋</div>
                 <div style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '0.5px' }}>TaskFlow</div>
@@ -767,7 +773,7 @@ function App() {
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>TaskFlow - Collaborative Kanban Board</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>Full-stack task management application with a Trello-like Kanban interface. Features drag-and-drop organization (@dnd-kit), team collaboration via email invites, threaded comments, and a dark-themed admin moderation panel.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['Java 21', 'Spring Boot 4', 'React 18', 'TypeScript', 'MySQL', '@dnd-kit', 'JWT Auth'].map((tech, i) => (
                     <span key={i} style={{
@@ -783,7 +789,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://github.com/Bronsonsiallagan/taskflow-app" target="_blank" rel="noopener noreferrer" style={{
                     color: '#fff',
@@ -797,14 +803,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -823,14 +829,14 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', background: 'linear-gradient(135deg, #064e3b 0%, #047857 50%, #10b981 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', padding: '1.5rem', textAlign: 'center' }}>
                 <div style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>🛒</div>
                 <div style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '0.5px' }}>TechMart</div>
@@ -839,7 +845,7 @@ function App() {
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>TechMart - Electronics E-Commerce App</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>Full-stack e-commerce application for electronic products. Features product catalog with filtering/search, shopping cart, manual payment upload, order status tracking, and an Admin dashboard with Chart.js revenue visualization.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['Golang (Gin)', 'GORM', 'Angular 18', 'MySQL', 'Chart.js', 'JWT Auth', 'RxJS'].map((tech, i) => (
                     <span key={i} style={{
@@ -855,7 +861,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://github.com/Bronsonsiallagan/techmart-ecommerce" target="_blank" rel="noopener noreferrer" style={{
                     color: '#fff',
@@ -869,14 +875,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -895,14 +901,14 @@ function App() {
               flexDirection: 'column',
               height: '100%'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-12px)'
-              e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-12px)'
+                e.currentTarget.style.boxShadow = '0 20px 50px 0 rgba(31,38,135,0.20)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.10)'
+              }}>
               <div style={{ width: '100%', height: '240px', background: 'linear-gradient(135deg, #083344 0%, #0e7490 50%, #06b6d4 100%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', padding: '1.5rem', textAlign: 'center' }}>
                 <div style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>🚢</div>
                 <div style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '0.5px' }}>Ferry Ticketing System</div>
@@ -911,7 +917,7 @@ function App() {
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.8rem', color: '#1f2937', lineHeight: 1.3 }}>Ferry Ticketing System - Lake Toba</h3>
                 <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '1.5rem', lineHeight: 1.6, flex: 1 }}>Full-stack ferry ticket booking system for the Ajibata–Ambarita route. Supports 3 roles (Admin, Staff, Customer), real-time vehicle quota validation, QR code E-tickets for check-in, and an Admin dashboard with CSV report export.</p>
-                
+
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                   {['NestJS', 'TypeORM', 'Vue 3', 'TypeScript', 'PrimeVue', 'Pinia', 'MySQL'].map((tech, i) => (
                     <span key={i} style={{
@@ -927,7 +933,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="https://github.com/Bronsonsiallagan/ferry-ticketing" target="_blank" rel="noopener noreferrer" style={{
                     color: '#fff',
@@ -941,14 +947,14 @@ function App() {
                     cursor: 'pointer',
                     border: '1px solid #1f2937'
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#111827'
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#1f2937'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#111827'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#1f2937'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}>
                     GitHub
                   </a>
                 </div>
@@ -965,12 +971,12 @@ function App() {
             <span style={{ color: '#4F46E5', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Get In Touch</span>
           </h2>
           <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #4F46E5 40%, #06b6d4 100%)', borderRadius: '2px', margin: '0 auto 48px auto' }}></div>
-          
+
           <div className="contact-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3rem' }}>
             <p className="contact-description" style={{ fontSize: '1.1rem', color: '#666', textAlign: 'center', marginBottom: '1rem', maxWidth: 600, lineHeight: 1.7 }}>
               I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out! 🚀
             </p>
-            
+
             {/* Contact Buttons Grid */}
             <div style={{
               display: 'flex',
@@ -995,16 +1001,16 @@ function App() {
                   cursor: 'pointer',
                   border: '2px solid transparent'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)'
-                  e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
-                  e.currentTarget.style.borderColor = '#4F46E5'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
-                  e.currentTarget.style.borderColor = 'transparent'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
+                    e.currentTarget.style.borderColor = '#4F46E5'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }}>
                   <div style={{ fontSize: '2.2rem', flexShrink: 0 }}>📧</div>
                   <div style={{ minWidth: 0, flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#1f2937', marginBottom: '0.2rem' }}>Email</div>
@@ -1028,16 +1034,16 @@ function App() {
                   cursor: 'pointer',
                   border: '2px solid transparent'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)'
-                  e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
-                  e.currentTarget.style.borderColor = '#25D366'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
-                  e.currentTarget.style.borderColor = 'transparent'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
+                    e.currentTarget.style.borderColor = '#25D366'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }}>
                   <div style={{ fontSize: '2.2rem', flexShrink: 0 }}>💬</div>
                   <div style={{ minWidth: 0, flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#1f2937', marginBottom: '0.2rem' }}>WhatsApp</div>
@@ -1061,16 +1067,16 @@ function App() {
                   cursor: 'pointer',
                   border: '2px solid transparent'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)'
-                  e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
-                  e.currentTarget.style.borderColor = '#E4405F'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
-                  e.currentTarget.style.borderColor = 'transparent'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
+                    e.currentTarget.style.borderColor = '#E4405F'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }}>
                   <div style={{ fontSize: '2.2rem', flexShrink: 0 }}>📸</div>
                   <div style={{ minWidth: 0, flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#1f2937', marginBottom: '0.2rem' }}>Instagram</div>
@@ -1094,16 +1100,16 @@ function App() {
                   cursor: 'pointer',
                   border: '2px solid transparent'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)'
-                  e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
-                  e.currentTarget.style.borderColor = '#0A66C2'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
-                  e.currentTarget.style.borderColor = 'transparent'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
+                    e.currentTarget.style.borderColor = '#0A66C2'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }}>
                   <div style={{ fontSize: '2.2rem', flexShrink: 0 }}>💼</div>
                   <div style={{ minWidth: 0, flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#1f2937', marginBottom: '0.2rem' }}>LinkedIn</div>
@@ -1127,16 +1133,16 @@ function App() {
                   cursor: 'pointer',
                   border: '2px solid transparent'
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)'
-                  e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
-                  e.currentTarget.style.borderColor = '#1F2937'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
-                  e.currentTarget.style.borderColor = 'transparent'
-                }}>
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px)'
+                    e.currentTarget.style.boxShadow = '0 12px 36px 0 rgba(79, 70, 229, 0.20)'
+                    e.currentTarget.style.borderColor = '#1F2937'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 24px 0 rgba(79, 70, 229, 0.12)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }}>
                   <div style={{ fontSize: '2.2rem', flexShrink: 0 }}>🐙</div>
                   <div style={{ minWidth: 0, flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#1f2937', marginBottom: '0.2rem' }}>GitHub</div>
@@ -1178,14 +1184,14 @@ function App() {
                 textDecoration: 'none',
                 cursor: 'pointer'
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-3px) scale(1.03)'
-                e.currentTarget.style.boxShadow = '0 8px 28px rgba(0, 0, 0, 0.28)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0) scale(1)'
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.18)'
-              }}>
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-3px) scale(1.03)'
+                  e.currentTarget.style.boxShadow = '0 8px 28px rgba(0, 0, 0, 0.28)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.18)'
+                }}>
                 <span>⬇️</span> Download My Resume
               </a>
             </div>
@@ -1194,7 +1200,7 @@ function App() {
       </section>
 
       {/* Footer */}
-     
+
     </div>
   )
 }
