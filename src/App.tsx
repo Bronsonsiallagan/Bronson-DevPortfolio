@@ -54,7 +54,7 @@ function App() {
     `${import.meta.env.BASE_URL}Poster_01.png`
   ]
 
-  const cvPdfUrl = `${import.meta.env.BASE_URL}CV-Bronson_TM_Siallagan.pdf`
+  const cvPdfUrl = `${import.meta.env.BASE_URL}Bronson_TM_Siallagan_CV.pdf`
   const certDsFrontUrl = `${import.meta.env.BASE_URL}12S22025_Associate%20Data%20Scientist.jpeg`
   const certDsBackUrl = `${import.meta.env.BASE_URL}WhatsApp%20Image%202026-05-18%20at%2013.35.48.jpeg`
   const certToeflUrl = `${import.meta.env.BASE_URL}TOELF%20Bronson%20Siallagan.jpeg`
@@ -319,7 +319,7 @@ function App() {
                 <button onClick={() => setIsCvModalOpen(true)} className="btn-primary">
                   📄 View Digital CV (ATS)
                 </button>
-                <a href={cvPdfUrl} download="CV-Bronson_TM_Siallagan.pdf" className="btn-accent">
+                <a href={cvPdfUrl} download="Bronson_TM_Siallagan_CV.pdf" className="btn-accent">
                   ⬇️ Download CV (PDF)
                 </a>
                 <button onClick={() => scrollToSection('projects')} className="btn-secondary">
@@ -1095,7 +1095,7 @@ function App() {
                 <button onClick={() => setIsCvModalOpen(true)} className="btn-primary" style={{ background: '#fff', color: '#4f46e5' }}>
                   👁️ View Digital CV
                 </button>
-                <a href={cvPdfUrl} download="CV-Bronson_TM_Siallagan.pdf" className="btn-accent">
+                <a href={cvPdfUrl} download="Bronson_TM_Siallagan_CV.pdf" className="btn-accent">
                   ⬇️ Download Official PDF
                 </a>
               </div>
@@ -1115,7 +1115,7 @@ function App() {
                 📄 Official Resume — Bronson TM Siallagan
               </div>
               <div className="cv-modal-header-actions">
-                <a href={cvPdfUrl} download="CV-Bronson_TM_Siallagan.pdf" className="nav-cv-btn" style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}>
+                <a href={cvPdfUrl} download="Bronson_TM_Siallagan_CV.pdf" className="nav-cv-btn" style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}>
                   ⬇️ Download PDF
                 </a>
                 <button
@@ -1154,6 +1154,14 @@ function App() {
                   Information Systems graduate with one internship and five projects spanning full-stack development and software testing. Builds web and ERP applications with Laravel, CodeIgniter, Spring Boot, NestJS, and Golang on the backend and Angular, React, and Vue on the frontend. Tests with manual functional, regression, UAT, and API (Postman) approaches, and builds automated E2E suites with Playwright and Selenium + Cucumber (BDD), applying SDLC, STLC, and Agile/Scrum practices. Experienced in RESTful API design, relational modeling (MySQL, PostgreSQL), and JWT authentication with role-based access control.
                 </p>
 
+                {/* Education */}
+                <h2 className="cv-section-heading">EDUCATION</h2>
+                <div className="cv-entry-header">
+                  <div className="cv-entry-title">Del Institute of Technology, Sitoluama, Sumatera Utara</div>
+                  <div className="cv-entry-date">Sep 2022 – Sep 2026</div>
+                </div>
+                <div className="cv-entry-sub">Bachelor of Information Systems, GPA 3.03/4.00</div>
+
                 {/* Work Experience */}
                 <h2 className="cv-section-heading">WORK EXPERIENCE</h2>
                 <div className="cv-entry-header">
@@ -1166,34 +1174,8 @@ function App() {
                   <li>Designed relational database models and a modular backend structure, replacing manual cross-department reconciliation with an automated process.</li>
                 </ul>
 
-                {/* Education */}
-                <h2 className="cv-section-heading">EDUCATION</h2>
-                <div className="cv-entry-header">
-                  <div className="cv-entry-title">Del Institute of Technology, Sitoluama, Sumatera Utara</div>
-                  <div className="cv-entry-date">Sep 2022 – Sep 2026</div>
-                </div>
-                <div className="cv-entry-sub">Bachelor of Information Systems, GPA 3.03/4.00</div>
-                <div style={{ fontSize: '0.85rem', color: '#1e293b', marginTop: '0.35rem', background: '#f8fafc', padding: '0.5rem 0.8rem', borderRadius: '4px', borderLeft: '3px solid #4f46e5' }}>
-                  <strong>Undergraduate Thesis:</strong> Multimodal Conditioning of Fine-Tuned Stable Diffusion XL for Controllable and Culturally Faithful Ulos Motif Generation
-                  <br />
-                  <span style={{ fontSize: '0.8rem', color: '#64748b' }}>Advisor: Humasak Tommy Argo Simanjuntak, ST, M.ISD | Tech: Stable Diffusion XL (SDXL 1.0), Multimodal LLaVA, PyTorch, LoRA</span>
-                </div>
-
                 {/* Projects */}
                 <h2 className="cv-section-heading">PROJECTS</h2>
-
-                {/* Undergraduate Thesis */}
-                <div className="cv-entry-header">
-                  <div className="cv-entry-title">Undergraduate Thesis: Controllable Ulos Motif Generation with Fine-Tuned SDXL & Multimodal LLaVA</div>
-                  <div className="cv-entry-date">Del Institute of Technology, 2025 – 2026</div>
-                </div>
-                <div className="cv-entry-sub">Lead Generative AI Researcher | Advisor: Humasak Tommy Argo Simanjuntak, ST, M.ISD | Python, SDXL, LLaVA, PyTorch, LoRA, Hugging Face</div>
-                <ul className="cv-list">
-                  <li>Fine-tuned Stable Diffusion XL (SDXL v1.0) with Multimodal LLaVA conditioning for culturally faithful, controllable generation of traditional Batak Ulos motifs.</li>
-                  <li>Curated an authentic primary image dataset directly collected from traditional Ulos weavers across North Sumatra to preserve sacred cultural fidelity and geometric motifs.</li>
-                  <li>Integrated vision-language multimodal feature extraction to translate weaver domain semantics and design prompts into high-resolution textile patterns.</li>
-                  <li>Delivered full academic research paper, scientific exhibition poster, and promotional video demonstration.</li>
-                </ul>
 
                 {/* Project 1 */}
                 <div className="cv-entry-header">
@@ -1252,28 +1234,13 @@ function App() {
                   <li>Automated E2E scenarios with Selenium WebDriver (Java) and Cucumber (BDD), and wrote unit tests with Jest (backend) and Vitest (frontend).</li>
                 </ul>
 
-                {/* Certifications */}
-                <h2 className="cv-section-heading">CERTIFICATIONS</h2>
-                <ul className="cv-list">
-                  <li><strong>Associate Data Scientist</strong>, Vocational School Graduate Academy, Digital Talent Scholarship (2025)</li>
-                  <li><strong>TOEFL ITP</strong> Score 460 (August 2025)</li>
-                </ul>
-
-                {/* Organizational Experience */}
-                <h2 className="cv-section-heading">ORGANIZATIONAL EXPERIENCE</h2>
-                <ul className="cv-list">
-                  <li><strong>Google Developer Student Club (GDSC)</strong> | Member | tech talks with Google Developer Experts, team projects (Aug 2023 – Dec 2024)</li>
-                  <li><strong>Himpunan Mahasiswa Sistem Informasi (HIMSI)</strong> | Arts Division Member | arts and cultural events, logistics (Oct 2023 – Oct 2025)</li>
-                  <li><strong>Student Election Commission (KPU Mahasiswa)</strong> | Security Division Member | student election activities (Sep 2023 – May 2024)</li>
-                </ul>
-
                 {/* Technical Skills */}
                 <h2 className="cv-section-heading">TECHNICAL SKILLS</h2>
                 <div className="cv-skill-category">
                   <strong>Testing & QA:</strong> Manual Functional, Regression & UAT; SDLC & STLC; Agile/Scrum; Automated E2E (Playwright, Selenium WebDriver, Cucumber/BDD, Katalon Studio); Unit Testing (Jest, Vitest); API Testing (Postman)
                 </div>
                 <div className="cv-skill-category">
-                  <strong>Languages:</strong> Java, JavaScript, TypeScript, PHP, Golang, Python, C#, .Net, SQL.
+                  <strong>Languages:</strong> Java, JavaScript, TypeScript, PHP, Golang, Python, C#.Net, SQL.
                 </div>
                 <div className="cv-skill-category">
                   <strong>Backend:</strong> Spring Boot, Laravel, CodeIgniter, NestJS, Gin; RESTful API Design, JWT, RBAC, GORM, TypeORM, JPA/Hibernate
@@ -1291,8 +1258,35 @@ function App() {
                   <strong>Soft Skills:</strong> Attention to Detail, Adaptability, Collaborative Teamwork, Eager to Learn.
                 </div>
                 <div className="cv-skill-category">
-                  <strong>Languages:</strong> Indonesian (Native), English (Intermediate).
+                  <strong>Spoken Languages:</strong> Indonesian (Native), English (Intermediate).
                 </div>
+
+                {/* Certifications */}
+                <h2 className="cv-section-heading">CERTIFICATIONS</h2>
+                <ul className="cv-list">
+                  <li><strong>Associate Data Scientist</strong>, Vocational School Graduate Academy, Digital Talent Scholarship (2025)</li>
+                  <li><strong>TOEFL ITP</strong> Score 460 (August 2025)</li>
+                </ul>
+
+                {/* Organizational Experience */}
+                <h2 className="cv-section-heading">ORGANIZATIONAL EXPERIENCE</h2>
+                <div className="cv-entry-header">
+                  <div className="cv-entry-title">Google Developer Student Club (GDSC) | Member</div>
+                  <div className="cv-entry-date">Aug 2023 – Dec 2024</div>
+                </div>
+                <div className="cv-entry-sub" style={{ marginBottom: '0.4rem' }}>tech talks with Google Developer Experts, team projects</div>
+
+                <div className="cv-entry-header">
+                  <div className="cv-entry-title">Himpunan Mahasiswa Sistem Informasi (HIMSI) | Arts Division Member</div>
+                  <div className="cv-entry-date">Oct 2023 – Oct 2025</div>
+                </div>
+                <div className="cv-entry-sub" style={{ marginBottom: '0.4rem' }}>arts and cultural events, logistics</div>
+
+                <div className="cv-entry-header">
+                  <div className="cv-entry-title">Student Election Commission (KPU Mahasiswa) | Security Division Member</div>
+                  <div className="cv-entry-date">Sep 2023 – May 2024</div>
+                </div>
+                <div className="cv-entry-sub" style={{ marginBottom: '0.4rem' }}>student election activities</div>
               </div>
             </div>
           </div>
